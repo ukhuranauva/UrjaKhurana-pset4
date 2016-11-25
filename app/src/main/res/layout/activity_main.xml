@@ -10,20 +10,48 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.urja.urjakhurana_pset4.MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="To do"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#AACCEB"
+        android:id="@+id/todoText"/>
+
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/addButton">
+        android:layout_below="@+id/todoText">
     </ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listView"
+        android:layout_centerHorizontal="true"
+        android:text="Done"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#805462"
+        android:id="@+id/doneText"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doneText"
+        android:layout_above="@+id/toDo"
+        android:id="@+id/doneView"></ListView>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@id/addButton"
+        android:layout_toLeftOf="@+id/addButton"
         android:hint="What do you have to do?"
         android:id="@+id/toDo"/>
 
